@@ -46,12 +46,14 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
 }
 
 .quiz-intro > p{
     margin: 0 auto;
-    width: 600px;
+    max-width: 600px;
     margin-top: 20px;
+    
 }
 
 .quiz-main{
@@ -59,7 +61,7 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
     text-align: left;
 }
@@ -82,7 +84,7 @@ button:hover{
 
 .initials-screen{
     display: none;
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -93,10 +95,9 @@ button:hover{
 .upper-border{
     padding-top: 10px;
     border-top: 2px solid cyan;
- 
     margin: 0 auto;
     margin-top: 10px;
-    width: 600px;
+    max-width: 600px;
 }
 
 .answer-status{
@@ -105,7 +106,7 @@ button:hover{
 }
 
 .high-score-wrapper{
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 100px;
 }
@@ -125,4 +126,11 @@ button:hover{
 
 .high-score{
     margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px){
+    *{
+        text-align: center;
+    }
 }
