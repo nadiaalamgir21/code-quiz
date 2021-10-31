@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="highscores.html">View High Scores</a>
+        <span id="timerElm"></span>
+    </nav>
+
+    <section class="quiz-intro">
+        <h1>Coding Quiz Challenge</h1>
+
+        <p>Try to answer the following code-related questions within the time limit.
+            Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+
+        <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+    </section>
+
+    <section class="quiz-main"></section>
+
+    <section class="answer-status"></section>
+
+    <section class="initials-screen">
+        <h3> All Done!</h3>
+        <p class="mt-20 final-score-text"> Your final score is </p>
+        <article class="mt-20">
+            <span> Enter your initials </span>
+            <input type="text" id="initialInput"></input>
+            <button onclick="submitScore()">Submit</button>
+        </article>
+    </section>
+
+    <script src="/assets/js/questions.js"> </script>
+    <script src="/assets/js/logics.js"> </script>
+</body>
+</html>
