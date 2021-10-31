@@ -3,6 +3,8 @@ var timerCount = 100
 var currentQuesCount = 0
 let timerInterval = null
 var startQuizClicked = false
+var audioCorrect = new Audio("./../assets/sfx/correct-answer-sound.wav")
+var audioIncorrect = new Audio("./../assets/sfx/incorrect-answer-sound.wav")
 
 //timer function reduces the timer count every second and print the timercount on the screen and after expiration of the timer ends the game
 function timer() {
@@ -77,6 +79,7 @@ function checkAnswer(option) {
 function correctAnswer() {
   let answerStatus = document.querySelector(".answer-status")
   answerStatus.innerHTML = '<div class="upper-border">Correct answer!</div>'
+  audioCorrect.play()
 }
 
 //penalizes user by -10 seconds for every wrong answer.
@@ -85,6 +88,7 @@ function incorrectAnswer() {
   printTimerCount()
   let answerStatus = document.querySelector(".answer-status")
   answerStatus.innerHTML = '<div class="upper-border">Incorrect answer!</div>'
+  audioIncorrect.play()
 }
 
 //Verifies if all the questions have been answered and if so than moves to the score sheet.
@@ -93,10 +97,10 @@ function checkAllQuestionsAreDone() {
     generateQuestion(true)
 
     setTimeout(() => {
-        gameEnd()
-        //hide answer status block
-        document.querySelector(".answer-status").style.display = "none"
-      }, 1000)
+      gameEnd()
+      //hide answer status block
+      document.querySelector(".answer-status").style.display = "none"
+    }, 1000)
   } else {
     generateQuestion(true)
 
