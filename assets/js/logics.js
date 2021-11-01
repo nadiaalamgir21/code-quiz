@@ -155,5 +155,5 @@ function scoresStoring(initials) {
 }
 
 function redirectToHigscore() {
-  window.location = "/highscores.html"
+  window.location = "highscores.html"
 }
