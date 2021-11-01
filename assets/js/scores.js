@@ -20,7 +20,7 @@ function clearScores() {
 }
 
 function goBack() {
-  window.location = "/index.html";
+  window.location = "index.html";
 }
 
 window.onload = getAllscoresPrint;
