@@ -3,8 +3,8 @@ var timerCount = 100
 var currentQuesCount = 0
 let timerInterval = null
 var startQuizClicked = false
-var audioCorrect = new Audio("./../assets/sfx/correct-answer-sound.wav")
-var audioIncorrect = new Audio("./../assets/sfx/incorrect-answer-sound.wav")
+var audioCorrect = new Audio("assets/sfx/correct-answer-sound.wav")
+var audioIncorrect = new Audio("assets/sfx/incorrect-answer-sound.wav")
 
 //timer function reduces the timer count every second and print the timercount on the screen and after expiration of the timer ends the game
 function timer() {
